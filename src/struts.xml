@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!--开启开发模式-->
+    <constant name="struts.devMode" value="true"/>
+    <!--国际化编码配置，可以解决POST请求乱码-->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!--
+        package：将action配置封装，就是可以在packege中配置很多action
+            name：给包起个名字，起到标识的作用，可以任意取名，不能与其他包重名
+            namespace：给actionde的访问路径定义一个命名空间
+            extends：继承一个指定包 默认继承 struts-default
+            abstract：包是否为抽象的，标示性属性，标识该包不能独立运行，专为继承
+    -->
+    <package name="test" namespace="/test" extends="struts-default">
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+        <!--
+            action元素：配置action类
+                name：决定了action访问资源名
+                class：action的完成类名
+                method：制定调用action中的哪个方法来处理
+        -->
+        <action name="TestDemo1Action" class="com.qwm.struts2_1.testdemo.TestDemo1Action" method="test1">
+            <!--
+               result元素：结果配置
+                  name：标识结果处理的名字，与action方法的返回值对应
+                  type：制定调用哪一个result类来处理结果，默认使用转发
+                  标签体：填写页面的相对路径
+            -->
+            <result name="success">/hello.jsp</result>
+        </action>
+    </package>
+    <!--引入其他sttuts配置文件-->
+    <include file="com/qwm/struts2_1/dynamic/struts.xml"/>
+</struts>

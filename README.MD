@@ -38,6 +38,20 @@
 
 ----
 
+相关的项目
+
+
+**Struts2 学习之配置**
+[https://github.com/wimingxxx/Struts2_1_setting](https://github.com/wimingxxx/Struts2_1_setting)
+
+**Struts2 学习之结果与参数获取**
+[https://github.com/wimingxxx/Struts2_2_demo](https://github.com/wimingxxx/Struts2_2_demo)
+
+**Struts2 学习之OGNL、拦截器、标签**
+[https://github.com/wimingxxx/Struts2_3_demo](https://github.com/wimingxxx/Struts2_3_demo)
+
+----
+
 [TOC]
 
 # SSH与SSM学习之Struts201——介绍与环境搭建和第一个例子
